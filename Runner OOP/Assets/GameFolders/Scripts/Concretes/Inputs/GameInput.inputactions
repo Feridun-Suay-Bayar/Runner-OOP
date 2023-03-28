@@ -11,8 +11,17 @@
                     "id": "598d5bdc-5c6b-424b-8218-f24ed67afbdf",
                     "expectedControlType": "Axis",
                     "processors": "",
-                    "interactions": "Press(behavior=2)",
+                    "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Jump",
+                    "type": "PassThrough",
+                    "id": "6ce929b0-01d5-4cd5-a1df-641d49ff72f6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -20,7 +29,7 @@
                     "name": "AD",
                     "id": "1f471f9d-ec18-412e-b505-6b4e5c4fab7b",
                     "path": "1DAxis",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": "",
                     "action": "HorizontalInputs",
@@ -53,8 +62,8 @@
                     "name": "GamePad",
                     "id": "2fd13f31-d49b-463d-b30a-5d5366da9966",
                     "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "AxisDeadzone(min=0.3)",
                     "groups": "",
                     "action": "HorizontalInputs",
                     "isComposite": true,
@@ -81,6 +90,28 @@
                     "action": "HorizontalInputs",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "144b7caf-3fb0-4e5a-a6d6-de7adfdc969a",
+                    "path": "<Keyboard>/space",
+                    "interactions": "Tap(duration=0.01)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ebd1efdf-9288-4a25-8c7f-277333c5f192",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "Tap(duration=0.01)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

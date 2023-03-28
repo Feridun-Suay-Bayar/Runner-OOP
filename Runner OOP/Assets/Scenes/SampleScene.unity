@@ -349,7 +349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6308083449725047519, guid: 5024c67a22fba1f449480b82ace72f55, type: 3}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7572116027381640753, guid: 5024c67a22fba1f449480b82ace72f55, type: 3}
       propertyPath: m_RootOrder

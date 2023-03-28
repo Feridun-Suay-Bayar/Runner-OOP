@@ -35,8 +35,17 @@ namespace Runnet.Inputs
                     ""id"": ""598d5bdc-5c6b-424b-8218-f24ed67afbdf"",
                     ""expectedControlType"": ""Axis"",
                     ""processors"": """",
-                    ""interactions"": ""Press(behavior=2)"",
+                    ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""6ce929b0-01d5-4cd5-a1df-641d49ff72f6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -44,7 +53,7 @@ namespace Runnet.Inputs
                     ""name"": ""AD"",
                     ""id"": ""1f471f9d-ec18-412e-b505-6b4e5c4fab7b"",
                     ""path"": ""1DAxis"",
-                    ""interactions"": """",
+                    ""interactions"": ""Press(behavior=2)"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""HorizontalInputs"",
@@ -77,8 +86,8 @@ namespace Runnet.Inputs
                     ""name"": ""GamePad"",
                     ""id"": ""2fd13f31-d49b-463d-b30a-5d5366da9966"",
                     ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
+                    ""interactions"": ""Press(behavior=2)"",
+                    ""processors"": ""AxisDeadzone(min=0.3)"",
                     ""groups"": """",
                     ""action"": ""HorizontalInputs"",
                     ""isComposite"": true,
@@ -105,6 +114,28 @@ namespace Runnet.Inputs
                     ""action"": ""HorizontalInputs"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""144b7caf-3fb0-4e5a-a6d6-de7adfdc969a"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": ""Tap(duration=0.01)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ebd1efdf-9288-4a25-8c7f-277333c5f192"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": ""Tap(duration=0.01)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -114,6 +145,7 @@ namespace Runnet.Inputs
             // PlayerOnFoot
             m_PlayerOnFoot = asset.FindActionMap("PlayerOnFoot", throwIfNotFound: true);
             m_PlayerOnFoot_HorizontalInputs = m_PlayerOnFoot.FindAction("HorizontalInputs", throwIfNotFound: true);
+            m_PlayerOnFoot_Jump = m_PlayerOnFoot.FindAction("Jump", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -174,11 +206,13 @@ namespace Runnet.Inputs
         private readonly InputActionMap m_PlayerOnFoot;
         private IPlayerOnFootActions m_PlayerOnFootActionsCallbackInterface;
         private readonly InputAction m_PlayerOnFoot_HorizontalInputs;
+        private readonly InputAction m_PlayerOnFoot_Jump;
         public struct PlayerOnFootActions
         {
             private @Inputs m_Wrapper;
             public PlayerOnFootActions(@Inputs wrapper) { m_Wrapper = wrapper; }
             public InputAction @HorizontalInputs => m_Wrapper.m_PlayerOnFoot_HorizontalInputs;
+            public InputAction @Jump => m_Wrapper.m_PlayerOnFoot_Jump;
             public InputActionMap Get() { return m_Wrapper.m_PlayerOnFoot; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -191,6 +225,9 @@ namespace Runnet.Inputs
                     @HorizontalInputs.started -= m_Wrapper.m_PlayerOnFootActionsCallbackInterface.OnHorizontalInputs;
                     @HorizontalInputs.performed -= m_Wrapper.m_PlayerOnFootActionsCallbackInterface.OnHorizontalInputs;
                     @HorizontalInputs.canceled -= m_Wrapper.m_PlayerOnFootActionsCallbackInterface.OnHorizontalInputs;
+                    @Jump.started -= m_Wrapper.m_PlayerOnFootActionsCallbackInterface.OnJump;
+                    @Jump.performed -= m_Wrapper.m_PlayerOnFootActionsCallbackInterface.OnJump;
+                    @Jump.canceled -= m_Wrapper.m_PlayerOnFootActionsCallbackInterface.OnJump;
                 }
                 m_Wrapper.m_PlayerOnFootActionsCallbackInterface = instance;
                 if (instance != null)
@@ -198,6 +235,9 @@ namespace Runnet.Inputs
                     @HorizontalInputs.started += instance.OnHorizontalInputs;
                     @HorizontalInputs.performed += instance.OnHorizontalInputs;
                     @HorizontalInputs.canceled += instance.OnHorizontalInputs;
+                    @Jump.started += instance.OnJump;
+                    @Jump.performed += instance.OnJump;
+                    @Jump.canceled += instance.OnJump;
                 }
             }
         }
@@ -205,6 +245,7 @@ namespace Runnet.Inputs
         public interface IPlayerOnFootActions
         {
             void OnHorizontalInputs(InputAction.CallbackContext context);
+            void OnJump(InputAction.CallbackContext context);
         }
     }
 }

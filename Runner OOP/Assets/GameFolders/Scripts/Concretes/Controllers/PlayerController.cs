@@ -19,6 +19,8 @@ namespace Runner.Controllers
         JumpWithRigidbody _jumpWithRigidbody;
 
         IInputReader _input;
+
+
         float _horizontal;
         private void Awake()
         {
@@ -29,10 +31,14 @@ namespace Runner.Controllers
         private void Update()
         {
             _horizontal = _input.Horizontal;
+            if (_input.IsJump)
+            {
+                _isJump = true;
+            }
         }
         private void FixedUpdate()
         {
-            if (_horizontalMover != null)
+            if (_horizontalMover != null && !_jumpWithRigidbody.CanJump)
             {
                 _horizontalMover.TickFixed(_horizontal, _movementSpeed);
             }

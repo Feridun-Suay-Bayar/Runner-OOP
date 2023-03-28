@@ -7,6 +7,7 @@ namespace Runner.Abstract.Inputs
     public interface IInputReader
     {
         float Horizontal { get; }
+        bool IsJump { get; }    
     }
 }
 
