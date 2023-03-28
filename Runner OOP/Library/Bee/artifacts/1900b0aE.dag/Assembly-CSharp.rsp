@@ -360,7 +360,10 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/GameFolders/Scripts/Abstracts/Inputs/IInputReader.cs"
 "Assets/GameFolders/Scripts/Concretes/Controllers/PlayerController.cs"
+"Assets/GameFolders/Scripts/Concretes/Inputs/GameInput.cs"
+"Assets/GameFolders/Scripts/Concretes/Inputs/InputReader.cs"
 "Assets/GameFolders/Scripts/Concretes/Movements/HorizontalMover.cs"
 "Assets/GameFolders/Scripts/Concretes/Movements/JumpWithRigidbody.cs"
 -langversion:9.0
