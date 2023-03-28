@@ -10,6 +10,7 @@ namespace Runner.Controllers
 {
     public class PlayerController : MonoBehaviour
     {
+        [SerializeField] float _moveBoundary = 4f;
         [SerializeField] float _horizantalDirection = 0f;
         [SerializeField] float _movementSpeed = 10f;
         [SerializeField] float _jumpForce = 300f;
@@ -17,6 +18,9 @@ namespace Runner.Controllers
 
         HorizontalMover _horizontalMover;
         JumpWithRigidbody _jumpWithRigidbody;
+
+        public float MovementSpeed => _movementSpeed;
+        public float MoveBoundary => _moveBoundary;
 
         IInputReader _input;
 
@@ -40,7 +44,7 @@ namespace Runner.Controllers
         {
             if (_horizontalMover != null && !_jumpWithRigidbody.CanJump)
             {
-                _horizontalMover.TickFixed(_horizontal, _movementSpeed);
+                _horizontalMover.TickFixed(_horizontal);
             }
 
             if (_isJump)
