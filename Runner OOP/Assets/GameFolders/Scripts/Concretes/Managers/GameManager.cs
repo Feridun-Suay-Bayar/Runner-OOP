@@ -15,6 +15,15 @@ namespace Runner.Managers
         {
             Time.timeScale = 0;
         }
+        public void LoadScene()
+        {
+            Debug.Log("Start has been clicked.");
+        }
+        public void ExitGame()
+        {
+            Debug.Log("Exit has been clicked.");
+            Application.Quit();
+        }
     }
 }
 

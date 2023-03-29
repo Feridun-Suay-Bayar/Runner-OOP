@@ -372,6 +372,7 @@
 "Assets/GameFolders/Scripts/Concretes/Movements/HorizontalMover.cs"
 "Assets/GameFolders/Scripts/Concretes/Movements/JumpWithRigidbody.cs"
 "Assets/GameFolders/Scripts/Concretes/Movements/VerticalMover.cs"
+"Assets/GameFolders/Scripts/Concretes/UIs/MenuPanel.cs"
 -langversion:9.0
 
 /deterministic
