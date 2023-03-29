@@ -1,5 +1,6 @@
 using Runner.Abstract.Inputs;
 using Runner.Inputs;
+using Runner.Managers;
 using Runner.Movements;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace Runner.Controllers
         [SerializeField] float _movementSpeed = 10f;
         [SerializeField] float _jumpForce = 300f;
         [SerializeField] bool _isJump;
+        bool _isDead = false;
 
         HorizontalMover _horizontalMover;
         JumpWithRigidbody _jumpWithRigidbody;
@@ -34,7 +36,10 @@ namespace Runner.Controllers
         }
         private void Update()
         {
+            if (!_isDead) return;
+
             _horizontal = _input.Horizontal;
+
             if (_input.IsJump)
             {
                 _isJump = true;
@@ -52,6 +57,21 @@ namespace Runner.Controllers
                 _jumpWithRigidbody.TickFixed(_jumpForce);
             }
             _isJump = false;
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+           
+        }
+        private void OnTriggerEnter(Collider other)
+        {
+            EnemyController enemyController = other.GetComponent<EnemyController>();
+
+            if (enemyController != null)
+            {
+                _isDead= true;
+                GameManager.Instance.StopGame();
+            }
         }
     }
 }
