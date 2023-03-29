@@ -15,7 +15,7 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-namespace Runnet.Inputs
+namespace Runner.Inputs
 {
     public partial class @Inputs : IInputActionCollection2, IDisposable
     {

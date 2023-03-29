@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Runner.Movements
 {
-    public class JumpWithRigidbody : MonoBehaviour
+    public class JumpWithRigidbody
     {
         Rigidbody _rigidbody;
 

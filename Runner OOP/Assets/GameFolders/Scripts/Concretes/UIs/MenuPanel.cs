@@ -9,7 +9,7 @@ namespace Runner.UIs
     {
         public void StartButton()
         {
-            GameManager.Instance.LoadScene();
+            GameManager.Instance.LoadScene("PlayScene");
         }
         public void ExitButton()
         {

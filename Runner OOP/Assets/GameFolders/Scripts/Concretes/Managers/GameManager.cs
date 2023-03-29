@@ -2,11 +2,13 @@ using Runner.Abstract.Utilities;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Runner.Managers
 {
     public class GameManager : SingletonMonoBehaviourObject<GameManager>
     {
+        public event System.Action OnGameStop;
         private void Awake()
         {
             SingletonThisObject(this);
@@ -14,10 +16,18 @@ namespace Runner.Managers
         public void StopGame()
         {
             Time.timeScale = 0;
+            if (OnGameStop != null)
+            {
+                OnGameStop();
+            }
         }
-        public void LoadScene()
+        public void LoadScene(string sceneName)
         {
-            Debug.Log("Start has been clicked.");
+            StartCoroutine(LoadSceneAsync(sceneName));
+        }
+        private IEnumerator LoadSceneAsync(string sceneName)
+        {
+            yield return SceneManager.LoadSceneAsync(sceneName);    
         }
         public void ExitGame()
         {

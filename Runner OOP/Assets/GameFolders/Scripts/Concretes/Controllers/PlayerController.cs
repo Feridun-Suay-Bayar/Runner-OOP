@@ -12,7 +12,6 @@ namespace Runner.Controllers
     public class PlayerController : MonoBehaviour
     {
         [SerializeField] float _moveBoundary = 4f;
-        [SerializeField] float _horizantalDirection = 0f;
         [SerializeField] float _movementSpeed = 10f;
         [SerializeField] float _jumpForce = 300f;
         [SerializeField] bool _isJump;
@@ -36,7 +35,7 @@ namespace Runner.Controllers
         }
         private void Update()
         {
-            if (!_isDead) return;
+            if (_isDead) return;
 
             _horizontal = _input.Horizontal;
 
