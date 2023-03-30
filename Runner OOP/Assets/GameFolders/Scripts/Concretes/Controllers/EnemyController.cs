@@ -1,3 +1,4 @@
+using Runner.Managers;
 using Runner.Movements;
 using System;
 using System.Collections;
@@ -36,7 +37,7 @@ namespace Runner.Controllers
         }
         private void KillYourself()
         {
-            Destroy(this.gameObject);
+            EnemyManager.Instance.SetPool(this);
         }
     }
 }

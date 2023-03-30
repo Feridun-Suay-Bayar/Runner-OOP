@@ -1,3 +1,4 @@
+using Runner.Managers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,7 @@ namespace Runner.Controllers
 {
     public class SpawnerController : MonoBehaviour
     {
-        [SerializeField] EnemyController _enemyPrefab;
+        
         [Range(0.1f,5f)]
         [SerializeField] float _minTime = 0.1f;
         [Range(6f, 15f)]
@@ -31,9 +32,10 @@ namespace Runner.Controllers
 
         private void Spawn()
         {
-            EnemyController _newEnemy = Instantiate(_enemyPrefab, transform.position, transform.rotation);
+            EnemyController _newEnemy = EnemyManager.Instance.GetPool();
             _newEnemy.transform.parent = this.transform;
-
+            _newEnemy.transform.position = this.transform.position;
+            _newEnemy.gameObject.SetActive(true);
             GetRandomMaxTime();
         }
         private void GetRandomMaxTime()

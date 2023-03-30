@@ -368,6 +368,7 @@
 "Assets/GameFolders/Scripts/Concretes/Controllers/SpawnerController.cs"
 "Assets/GameFolders/Scripts/Concretes/Inputs/GameInput.cs"
 "Assets/GameFolders/Scripts/Concretes/Inputs/InputReader.cs"
+"Assets/GameFolders/Scripts/Concretes/Managers/EnemyManager.cs"
 "Assets/GameFolders/Scripts/Concretes/Managers/GameManager.cs"
 "Assets/GameFolders/Scripts/Concretes/Movements/HorizontalMover.cs"
 "Assets/GameFolders/Scripts/Concretes/Movements/JumpWithRigidbody.cs"
