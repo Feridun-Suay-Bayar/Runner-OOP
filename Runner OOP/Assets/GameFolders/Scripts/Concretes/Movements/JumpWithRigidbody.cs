@@ -1,3 +1,4 @@
+using Runner.Abstract.Movements;
 using Runner.Controllers;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using UnityEngine;
 
 namespace Runner.Movements
 {
-    public class JumpWithRigidbody
+    public class JumpWithRigidbody : IJump
     {
         Rigidbody _rigidbody;
 
@@ -17,7 +18,7 @@ namespace Runner.Movements
             _rigidbody = playerController.GetComponent<Rigidbody>();
         }
 
-        public void TickFixed( float jumpForce)
+        public void FixedTick( float jumpForce)
         {
             if (CanJump) return;
                 

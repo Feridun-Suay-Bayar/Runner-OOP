@@ -1,3 +1,5 @@
+using Runner.Abstract.Controllers;
+using Runner.Abstract.Movements;
 using Runner.Controllers;
 using System.Collections;
 using System.Collections.Generic;
@@ -5,19 +7,19 @@ using UnityEngine;
 
 namespace Runner.Movements
 {
-    public class VerticalMover
+    public class VerticalMover : IMover
     {
-        EnemyController _enemyController;
+        IEntityController _entityController;
         float _moveSpeed = 7;
 
-        public VerticalMover(EnemyController enemyController)
+        public VerticalMover(IEntityController entityController)
         {
-            _enemyController = enemyController;
-            _moveSpeed = _enemyController.Speed;
+            _entityController = entityController;
+            //_moveSpeed = _entityController.Speed;
         }
         public void FixedTick(float vertical = 1)
         {
-            _enemyController.transform.Translate(Vector3.back * vertical * Time.fixedDeltaTime * _moveSpeed);
+            _entityController.transform.Translate(Vector3.back * vertical * Time.fixedDeltaTime * _moveSpeed);
         }
         
     }

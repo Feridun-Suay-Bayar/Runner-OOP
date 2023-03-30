@@ -27,6 +27,7 @@ namespace Runner.Managers
         }
         private IEnumerator LoadSceneAsync(string sceneName)
         {
+            Time.timeScale = 1.0f;
             yield return SceneManager.LoadSceneAsync(sceneName);    
         }
         public void ExitGame()

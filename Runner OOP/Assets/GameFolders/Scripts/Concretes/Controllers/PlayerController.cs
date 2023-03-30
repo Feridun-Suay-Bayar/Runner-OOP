@@ -1,4 +1,6 @@
+using Runner.Abstract.Controllers;
 using Runner.Abstract.Inputs;
+using Runner.Abstract.Movements;
 using Runner.Inputs;
 using Runner.Managers;
 using Runner.Movements;
@@ -9,19 +11,17 @@ using UnityEngine.InputSystem;
 
 namespace Runner.Controllers
 {
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : MyCharacterController, IEntityController
     {
-        [SerializeField] float _moveBoundary = 4f;
-        [SerializeField] float _movementSpeed = 10f;
+        
         [SerializeField] float _jumpForce = 300f;
         [SerializeField] bool _isJump;
         bool _isDead = false;
 
-        HorizontalMover _horizontalMover;
-        JumpWithRigidbody _jumpWithRigidbody;
+        IMover _mover;
+        IJump _jumpWithRigidbody;
 
-        public float MovementSpeed => _movementSpeed;
-        public float MoveBoundary => _moveBoundary;
+
 
         IInputReader _input;
 
@@ -29,7 +29,7 @@ namespace Runner.Controllers
         float _horizontal;
         private void Awake()
         {
-            _horizontalMover = new HorizontalMover(this);
+            _mover = new HorizontalMover(this);
             _jumpWithRigidbody= new JumpWithRigidbody(this);
             _input = new InputReader(GetComponent<PlayerInput>());
         }
@@ -46,14 +46,14 @@ namespace Runner.Controllers
         }
         private void FixedUpdate()
         {
-            if (_horizontalMover != null && !_jumpWithRigidbody.CanJump)
+            if (_mover != null && !_jumpWithRigidbody.CanJump)
             {
-                _horizontalMover.TickFixed(_horizontal);
+                _mover.FixedTick(_horizontal);
             }
 
             if (_isJump)
             {
-                _jumpWithRigidbody.TickFixed(_jumpForce);
+                _jumpWithRigidbody.FixedTick(_jumpForce);
             }
             _isJump = false;
         }
@@ -64,9 +64,9 @@ namespace Runner.Controllers
         }
         private void OnTriggerEnter(Collider other)
         {
-            EnemyController enemyController = other.GetComponent<EnemyController>();
+            IEntityController entityController = other.GetComponent<IEntityController>();
 
-            if (enemyController != null)
+            if (entityController != null)
             {
                 _isDead= true;
                 GameManager.Instance.StopGame();
