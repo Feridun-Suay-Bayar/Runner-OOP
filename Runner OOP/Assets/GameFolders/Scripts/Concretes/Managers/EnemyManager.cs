@@ -9,7 +9,7 @@ namespace Runner.Managers
 {
     public class EnemyManager : SingletonMonoBehaviourObject<EnemyManager>
     {
-        [SerializeField] EnemyController _enemyPrefab;
+        [SerializeField] EnemyController[] _enemyPrefabs;
 
         Queue<EnemyController> _enemies = new Queue<EnemyController>();
 
@@ -27,7 +27,7 @@ namespace Runner.Managers
         {
             for(int i = 0; i < 10; i++)
             {
-                EnemyController newEnemy = Instantiate(_enemyPrefab);
+                EnemyController newEnemy = Instantiate(_enemyPrefabs[Random.Range(0,_enemyPrefabs.Length)]);
                 newEnemy.gameObject.SetActive(false);
                 newEnemy.transform.parent = this.transform;
                 _enemies.Enqueue(newEnemy);
