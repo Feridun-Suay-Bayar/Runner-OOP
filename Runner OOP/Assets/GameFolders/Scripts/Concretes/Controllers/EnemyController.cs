@@ -1,4 +1,5 @@
 using Runner.Abstract.Controllers;
+using Runner.Enum;
 using Runner.Managers;
 using Runner.Movements;
 using System;
@@ -10,12 +11,13 @@ namespace Runner.Controllers
 {
     public class EnemyController : MyCharacterController, IEntityController
     {
-
         [SerializeField] float _maxLifeTime = 10f;
+        [SerializeField] EnemyEnum _enemyEnum;
 
         VerticalMover verticalMover;
         float _currentLifeTime = 0f;
 
+        public EnemyEnum EnemyEnum => _enemyEnum;
 
         private void Awake()
         {
