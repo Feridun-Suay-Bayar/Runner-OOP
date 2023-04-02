@@ -35,12 +35,19 @@ namespace Runner.Controllers
 
         private void FixedUpdate()
         {
-            verticalMover.FixedTick();
+            verticalMover.FixedTick(1f);
         }
         private void KillYourself()
         {
             EnemyManager.Instance.SetPool(this);
         }
+        public void SetMoveSpeed(float movementSpeed)
+        {
+            if (_movementSpeed > movementSpeed) return;
+
+            _movementSpeed = movementSpeed;
+        }
+        
     }
 }
 

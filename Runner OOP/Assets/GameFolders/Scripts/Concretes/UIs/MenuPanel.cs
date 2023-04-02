@@ -7,8 +7,9 @@ namespace Runner.UIs
 {
     public class MenuPanel : MonoBehaviour
     {
-        public void StartButton()
+        public void SelectAndStartButton(int index)
         {
+            GameManager.Instance.LevelDifficultyIndex = index;
             GameManager.Instance.LoadScene("PlayScene");
         }
         public void ExitButton()

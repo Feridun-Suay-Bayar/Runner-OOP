@@ -123,18 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &124911752 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9023733251692323955, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+--- !u!114 &124911754 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 124911754, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
   m_PrefabInstance: {fileID: 7203256628889141216}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &124911754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 124911752}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 760515c429f92574bbef3f33456ae61a, type: 3}
@@ -144,6 +138,16 @@ MonoBehaviour:
 Light:
   m_CorrespondingSourceObject: {fileID: 5500313347494080583, guid: 3fc261e68799f0e4bb02918e8467d27c, type: 3}
   m_PrefabInstance: {fileID: 5500313346789098205}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1132304413 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4545221102778320358, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+  m_PrefabInstance: {fileID: 7203256628889141216}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1896286285 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2192901805571231834, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+  m_PrefabInstance: {fileID: 7203256628889141216}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &770184586620014465
 PrefabInstance:
@@ -435,97 +439,149 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2375059006084462943, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+    - target: {fileID: 1320405573870340826, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320405573870340826, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 124911754}
+    - target: {fileID: 1320405573870340826, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectAndStartButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320405573870340826, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Runner.UIs.MenuPanel, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320405573870340826, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320405573870340826, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192901805571231834, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3143035893558815871, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3143035893558815871, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 124911754}
+    - target: {fileID: 3143035893558815871, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectAndStartButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3143035893558815871, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Runner.UIs.MenuPanel, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3143035893558815871, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3143035893558815871, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543137537491285368, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
       propertyPath: m_Name
-      value: ExitButton
+      value: DifficultyTex
       objectReference: {fileID: 0}
     - target: {fileID: 3817154145999414581, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3817154145999414581, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817154145999414581, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3817154145999414581, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 124911754}
+      objectReference: {fileID: 1132304413}
+    - target: {fileID: 3817154145999414581, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1896286285}
     - target: {fileID: 3817154145999414581, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3817154145999414581, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817154145999414581, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartButton
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817154145999414581, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 3817154145999414581, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Runner.UIs.MenuPanel, Assembly-CSharp
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817154145999414581, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817154145999414581, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817154145999414581, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3817154145999414581, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 4959058143028615483, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
-      propertyPath: m_Name
-      value: MenuText (TMP)
+    - target: {fileID: 3817154145999414581, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 5055083043360603183, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
-      propertyPath: m_text
-      value: Welcome to the my Oop Runner Game
+    - target: {fileID: 4009239334160870906, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009239334160870906, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 124911754}
+    - target: {fileID: 4009239334160870906, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectAndStartButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009239334160870906, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Runner.UIs.MenuPanel, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009239334160870906, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4545221102778320358, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5258304296785941058, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
       propertyPath: m_Name
       value: MenuCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6977115386907225228, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6977115386907225228, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6977115386907225228, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 124911754}
-    - target: {fileID: 6977115386907225228, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6977115386907225228, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ExitButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 6977115386907225228, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Runner.UIs.MenuPanel, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6977115386907225228, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7328264437543577192, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
-      propertyPath: m_Name
-      value: PlayButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 7413566613091951085, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
-      propertyPath: m_text
-      value: Play
-      objectReference: {fileID: 0}
-    - target: {fileID: 8404572909719478433, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
-      propertyPath: m_text
-      value: Exit
-      objectReference: {fileID: 0}
-    - target: {fileID: 8404572909719478433, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
-      propertyPath: m_fontSize
-      value: 57.77
-      objectReference: {fileID: 0}
-    - target: {fileID: 8404572909719478433, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}
-      propertyPath: m_fontSizeMax
-      value: 57.77
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a78bc85d50bf3c24aa2d9eb18848eae6, type: 3}

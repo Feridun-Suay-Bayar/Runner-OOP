@@ -1,4 +1,5 @@
 using Runner.Abstract.Utilities;
+using Runner.ScriptableObjects;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,29 @@ namespace Runner.Managers
 {
     public class GameManager : SingletonMonoBehaviourObject<GameManager>
     {
+        [SerializeField] LevelDifficultyData[] levelDifficultyDatas;
+
+        public LevelDifficultyData LevelDifficultyData => levelDifficultyDatas[LevelDifficultyIndex];
+
+        int _difficultyIndex;
+
+        public int LevelDifficultyIndex
+        {
+            get => _difficultyIndex;
+            set
+            {
+                if (_difficultyIndex < 0  || _difficultyIndex > levelDifficultyDatas.Length) {
+                    LoadSceneAsync("PlayScene");
+                }
+                else
+                {
+                    _difficultyIndex = value;
+                }
+            }
+        }
+
+        int _index;
+
         public event System.Action OnGameStop;
         private void Awake()
         {

@@ -110,10 +110,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2d38d01d206e524fa23fdbf05c054bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyPrefab: {fileID: 8448592053463054734, guid: de07e17245dfec54b9b83aa11a9f0efe, type: 3}
-  _maxSpawnTime: 10
   _minTime: 0.1
   _maxTime: 20
+  _maxSpawnTime: 10
 --- !u!4 &4375371047944589491 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2291866012990718039, guid: 75770883e713c944c9ed3c692dc99043, type: 3}
@@ -193,10 +192,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2d38d01d206e524fa23fdbf05c054bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyPrefab: {fileID: 8448592053463054734, guid: de07e17245dfec54b9b83aa11a9f0efe, type: 3}
-  _maxSpawnTime: 10
   _minTime: 0.1
   _maxTime: 20
+  _maxSpawnTime: 10
 --- !u!4 &9157114501311339896 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5157221826731711003, guid: e36b45d9e110028468dc6cc7d2b5dea0, type: 3}
@@ -276,10 +274,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2d38d01d206e524fa23fdbf05c054bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyPrefab: {fileID: 8448592053463054734, guid: de07e17245dfec54b9b83aa11a9f0efe, type: 3}
-  _maxSpawnTime: 10
   _minTime: 0.1
   _maxTime: 20
+  _maxSpawnTime: 10
 --- !u!4 &7118964838686600362 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3210569290384395968, guid: 2748a74594cde06419b13be5b1aa3726, type: 3}
@@ -359,10 +356,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2d38d01d206e524fa23fdbf05c054bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyPrefab: {fileID: 8448592053463054734, guid: de07e17245dfec54b9b83aa11a9f0efe, type: 3}
-  _maxSpawnTime: 10
   _minTime: 0.1
   _maxTime: 20
+  _maxSpawnTime: 10
 --- !u!4 &8946934521813145289 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2785293683480291135, guid: f502667aace3aaf4d852db5215e3363b, type: 3}
@@ -447,7 +443,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2d38d01d206e524fa23fdbf05c054bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyPrefab: {fileID: 8448592053463054734, guid: de07e17245dfec54b9b83aa11a9f0efe, type: 3}
-  _maxSpawnTime: 10
   _minTime: 0.1
   _maxTime: 20
+  _maxSpawnTime: 10

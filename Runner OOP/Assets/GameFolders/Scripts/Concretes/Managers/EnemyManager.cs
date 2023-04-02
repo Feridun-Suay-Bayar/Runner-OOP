@@ -14,6 +14,8 @@ namespace Runner.Managers
         [SerializeField] private float _addDelayTime;
         [SerializeField] EnemyController[] _enemyPrefabs;
 
+        float _movementSpeed;
+
         Dictionary<EnemyEnum, Queue<EnemyController>> _enemies = new Dictionary<EnemyEnum, Queue<EnemyController>>();
         public float AddDelayTime => _addDelayTime;
 
@@ -61,12 +63,26 @@ namespace Runner.Managers
 
             if (enemyControllers.Count == 0)
             {
-                EnemyController newEnemy = Instantiate(_enemyPrefabs[(int)enemyEnum]);
-                enemyControllers.Enqueue(newEnemy);
+                for(int i = 0; i < 2; i++)
+                {
+                    EnemyController newEnemy = Instantiate(_enemyPrefabs[(int)enemyEnum]);
+                    newEnemy.gameObject.SetActive(false);
+                    enemyControllers.Enqueue(newEnemy);
+                }
             }
-            return enemyControllers.Dequeue();
+            EnemyController enemyController = enemyControllers.Dequeue();
+            enemyController.SetMoveSpeed(_movementSpeed);
+            return enemyController;
         }
 
+        public void SetMoveSpeed(float moveSpeed)
+        {
+            _movementSpeed = moveSpeed;
+        }
+        public void SetAddDelayTime(float addDelayTime)
+        {
+            _addDelayTime = addDelayTime;
+        }
     }
 }
 

@@ -7,7 +7,7 @@ namespace Runner.Abstract.Controllers
     public class MyCharacterController : MonoBehaviour
     {
         [SerializeField] float _moveBoundary = 4f;
-        [SerializeField] float _movementSpeed = 10f;
+        [SerializeField] protected float _movementSpeed;
 
         public float MoveSpeed => _movementSpeed;
         public float MoveBoundary => _moveBoundary;

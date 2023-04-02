@@ -44,3 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bb2917a179f25e4aa058a2e44fe5d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelDifficultyDatas:
+  - {fileID: 11400000, guid: 7b21b156e6cb4ba4a878c002e84b8f32, type: 2}
+  - {fileID: 11400000, guid: c4e4eccebe636ba47b755405500404eb, type: 2}
+  - {fileID: 11400000, guid: de5f8c4d1dba6b041acdfab30a594f18, type: 2}

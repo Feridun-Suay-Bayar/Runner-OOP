@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20f17b5f198ab674fb4c60678b786bf3, type: 3}
+  m_Name: Easy
+  m_EditorClassIdentifier: 
+  _floorPrefab: {fileID: 3707671358927468942, guid: 4bf1c84a293643f4eae47750c4bffd70, type: 3}
+  _spawnerPrefab: {fileID: 5528078120704341794, guid: bb44e98c65a664847a4bb9999747e825, type: 3}
+  _skyboxMaterial: {fileID: 2100000, guid: a07fadb24ea940240afba3afc1a692cc, type: 2}
+  _moveSpeed: 10
+  _addDelayTime: 50
